@@ -1,0 +1,45 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+> cut<- c ("Fair", "Good", "Very Good", "Premium, Ideal")
+> color <- c("D","E","F","G","H","I","J")
+> clarity <- c ("I1", "SI2", "SI1", "VS2", "VS1", "VVS2", "VVS1","IF")
+> x <- (0:10.74)
+> y <- (0-10.74)
+> x <- numeric(0--10.74)
+> y <- numeric(0--10.74)
+> z <- numeric(0--10.74)
+> data(diamonds)
+> df <- diamonds
+gg
+
+
+# which diamonds are available for $500?
+# How much do you need to spend if you want to have at least a good diamond?
+
+# ggplot(diamonds,aes(carat,cut)) + geom_line()
+# Quite strange that the lowest cut have the highest carat,
+# does this mean that it is actually cheaper?
+# Why does a good cut have a lower carat rate than the very good ?
+#  ggplot(diamonds,aes(carat,price, colour=cut)) + geom_point()
+# The higher the carat , the lower the cut
+# Fair cut has compaired to the other cuts the higher carat although it is not the most expensive
+# The most expensive diamonds , if you consider the carat and cut , are commonly from ideal,premium and sometimes very good.
+# Although if you consider the quality of carat, a fair cut could have more carat and also be in a lower price range than the other cuts.
+# If you consider the cut , the carat would not be more than 3.5 carat.
+# The ideal cut wil have 3.5 carat , premium and very good will have a maximum of 4 carat, the good cut will be around 3 carat and the fair will have 5 carat.
+#ggplot(diamonds,aes(carat,price, colour=cut)) + geom_line()
+#This plot clarify that the ideal cut is quite dominated although it does not neccesairy means that it have the ideal cut
+#The cuts with the highest carats are : fair,premium,very good and fair.
+#The fair cut  with the highest carat cost around $16 000.
+# In this case price doesn't neccesairly means a better price or cut.
+# It all depends on the preferences.
+# Imagine that the budget is around $7500 than you could get a diamond with a very good cut with a maximum of 3 carat
+# carat/price = cut ?
+
+
+# Messed up plot , i wanted to create the frequency of the carats by price 
+ggplot(df,aes(frequency(carat),price)) + geom_line()
+> ggplot(df,aes(frequency(carat),price, colour=carat)) + geom_line()
